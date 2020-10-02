@@ -7,4 +7,6 @@ import { AppService } from '../services/app.service';
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule {
+  // what if i want to program something here ? What can i program here ?
+}
