@@ -37,4 +37,9 @@ export class AppService {
     
     return 'i am an working post, whenever i reach here, my response status will be 201 because of the post protocol, and i shall probably create something';
   }
+
+  deleteMethod(request): string{
+    console.log("Delete method");
+    return `the ${request} id has been deactivated in our database!`;
+  }
 }
