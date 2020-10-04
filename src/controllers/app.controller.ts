@@ -40,4 +40,11 @@ export class AppController {
     return this.appService.getMultipleParams(params);
   }
   //getIdTest3 is an example of how we can get multiples params in one variable. the params is an object, and in the example he turns into -> {number:11, name:thiago, age: 23}
+
+  //async
+  //async always returns promises or observables
+  @Get('/asyncTest')
+  async getAsyncFunc(): Promise<any>{
+    return await this.appService.getAsyncFunc();
+  }
 }

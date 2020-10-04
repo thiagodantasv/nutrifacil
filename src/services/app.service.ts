@@ -23,4 +23,12 @@ export class AppService {
     console.log(param1);
     return param1 ;
   }
+
+  async getAsyncFunc(): Promise<any>{
+    let promise = await new Promise(() => {
+      console.log('async function only return promises');
+      return "Hey, i only return promises";
+    });
+    return promise;
+  }
 }
