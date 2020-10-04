@@ -63,8 +63,11 @@ export class AppController {
     return this.appService.deleteMethod(id);
   }
 
+  //@Put decorator, for put requests.
   @Put('/putMethod/:id')
   putMethod(@Param('id') id: string){
     return this.appService.putMethod(id);
   }
+
+
 }
