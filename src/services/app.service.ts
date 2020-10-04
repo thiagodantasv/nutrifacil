@@ -42,4 +42,9 @@ export class AppService {
     console.log("Delete method");
     return `the ${request} id has been deactivated in our database!`;
   }
+
+  putMethod(request): string{
+    console.log('put method');
+    return `the ${request} has been updated !`;
+  }
 }

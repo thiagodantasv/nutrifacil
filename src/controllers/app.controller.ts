@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
 import { AppService } from '../services/app.service';
 import { PostMethodDto }from './dto/postMethod.dto';
 
@@ -61,5 +61,10 @@ export class AppController {
   @Delete('/deleteMethod/:id')
   deleteMethod(@Param('id') id: string){
     return this.appService.deleteMethod(id);
+  }
+
+  @Put('/putMethod/:id')
+  putMethod(@Param('id') id: string){
+    return this.appService.putMethod(id);
   }
 }
