@@ -12,4 +12,15 @@ export class AppService {
   getTest2(): string{
     return 'hello test2';
   }
+
+  getId(request:any): string{
+    console.log(typeof request);
+    console.log("who are you", request);
+    return request;
+  }
+
+  getMultipleParams(param1){
+    console.log(param1);
+    return param1 ;
+  }
 }
