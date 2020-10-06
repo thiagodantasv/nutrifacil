@@ -10,4 +10,8 @@ import { AppService } from '../services/app.service';
 })
 export class AppModule {
   // what if i want to program something here ? What can i program here ?
+  // one of the possible answers of that question is: Middleware.
+  //What is a middleware ? -> 
+  //Middleware is a function which is called before the route handler. 
+  //Middleware functions have access to the request and response objects, and the next() middleware function in the application’s request-response cycle.
 }
