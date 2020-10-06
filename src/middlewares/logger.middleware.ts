@@ -5,8 +5,8 @@ import { Request, Response } from 'express';
 export class LoggerMiddleware implements NestMiddleware{
     use(req: Request, res: Response, next: Function){
         console.log('Middleware working ->');
-        console.log('Request ->', req);
-        console.log('Response ->', res);
+        // console.log('Request ->', req);
+        // console.log('Response ->', res);
         next();
     }
 }
