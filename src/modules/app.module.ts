@@ -17,5 +17,7 @@ export class AppModule implements NestModule{
   //Middleware functions have access to the request and response objects, and the next() middleware function in the application’s request-response cycle.
   configure(consumer: MiddlewareConsumer){
     consumer.apply(LoggerMiddleware).forRoutes('test');
-}
+    // for routes can be written in different ways. Can receive two parameters: path and method. path is the api path you want to execute the middleware, and method is the kind of method you want to apply the middleware.
+    // you can also exclude with .exclude({path,method})
+  }
 }
