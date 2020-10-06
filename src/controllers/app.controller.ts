@@ -2,7 +2,7 @@ import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common'
 import { AppService } from '../services/app.service';
 import { PostMethodDto }from './dto/postMethod.dto';
 
-@Controller()
+@Controller('/test')
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
