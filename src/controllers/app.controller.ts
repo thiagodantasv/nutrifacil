@@ -1,6 +1,6 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
 import { AppService } from '../services/app.service';
-import { PostMethodDto }from './dto/postMethod.dto';
+// import { PostMethodDto }from './dto/postMethod.dto';
 
 @Controller('/test')
 export class AppController {
@@ -52,10 +52,10 @@ export class AppController {
   //@Post decorator, for post requests.
   //it is necessary to create Data access objects to use post methods, because of a decorator called @Body, where he needs the dto.
   //post method is supposed to work like that.
-  @Post('/postMethod')
-  async postMethod(@Body() postMethodDto: PostMethodDto): Promise<string>{
-    return this.appService.postMethod(postMethodDto);
-  }
+  // @Post('/postMethod')
+  // async postMethod(@Body() postMethodDto: PostMethodDto): Promise<string>{
+  //   return this.appService.postMethod(postMethodDto);
+  // }
 
   //@Delete decorator, for delete requests.
   @Delete('/deleteMethod/:id')
