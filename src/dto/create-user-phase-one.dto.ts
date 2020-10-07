@@ -1,16 +1,16 @@
-interface ICreateUserDto{
+interface ICreateUserPhaseOneDto{
     name: string;
     surname: string;
-    age: number;
     creationDate: Date;
+    birthdate: Date;
     email: string;
     password: string;
 }
 
-export class CreateUserDto implements ICreateUserDto{
+export class CreateUserPhaseOneDto implements ICreateUserPhaseOneDto{
     name: string;
     surname: string;
-    age: number;
+    birthdate: Date;
     creationDate: Date;
     email: string;
     password: string;
