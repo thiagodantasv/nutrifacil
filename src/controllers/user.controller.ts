@@ -1,13 +1,19 @@
-import { Body, Controller, Get, Post } from "@nestjs/common";
+import { Body, Controller, Get, Post, Put } from "@nestjs/common";
 import { UserService } from "./../services/user.service";
-import { CreateUserDto } from './../dto/create-user.dto';
+import { CreateUserPhaseOneDto } from '../dto/create-user-phase-one.dto';
+import { CreateUserPhaseTwoDto } from './../dto/create-user-phase-two.dto';
 
 @Controller('/user')
 export class UserController{
     constructor(private readonly userService: UserService) {}
 
-    @Post('/signup')
-    createUser(@Body() createUserDto: CreateUserDto): string{
-        return this.userService.createUser(createUserDto);
+    @Post('/signupPhaseOne')
+    createUserPhaseOne(@Body() createUserPhaseOneDto: CreateUserPhaseOneDto): string{
+        return this.userService.createUserPhaseOne(createUserPhaseOneDto);
+    }
+
+    @Put('/signupPhaseTwo')
+    createUserPhaseTwo(@Body() createUserPhaseTwo: CreateUserPhaseTwoDto){
+        return this.userService.createUserPhaseTwo(createUserPhaseTwo);
     }
 }

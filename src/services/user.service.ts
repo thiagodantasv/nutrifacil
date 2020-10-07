@@ -1,11 +1,17 @@
 import { Injectable } from '@nestjs/common';
-import { CreateUserDto } from 'src/dto/create-user.dto';
+import { CreateUserPhaseOneDto } from 'src/dto/create-user-phase-one.dto';
+import { CreateUserPhaseTwoDto } from 'src/dto/create-user-phase-two.dto';
 
 @Injectable()
 export class UserService {
 
-    createUser(user: CreateUserDto){
-        console.log("user ->", user);
+    createUserPhaseOne(user: CreateUserPhaseOneDto){
+        
+        return "oi";
+    }
+
+    createUserPhaseTwo(user: CreateUserPhaseTwoDto){
+        
         return "oi";
     }
 
