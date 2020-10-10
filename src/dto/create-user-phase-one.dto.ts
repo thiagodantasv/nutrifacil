@@ -3,8 +3,8 @@ import { IsDate, IsString } from "class-validator";
 interface ICreateUserPhaseOneDto{
     name: string;
     surname: string;
-    creationDate: Date;
-    birthdate: Date;
+    creationDate: string;
+    birthdate: string;
     email: string;
     password: string;
 }
@@ -17,10 +17,10 @@ export class CreateUserPhaseOneDto implements ICreateUserPhaseOneDto{
     surname: string;
 
     @IsDate()
-    birthdate: Date;
+    birthdate: string;
 
     @IsDate()
-    creationDate: Date;
+    creationDate: string;
 
     @IsString()
     email: string;
