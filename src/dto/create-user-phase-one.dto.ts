@@ -16,10 +16,10 @@ export class CreateUserPhaseOneDto implements ICreateUserPhaseOneDto{
     @IsString()
     surname: string;
 
-    @IsDate()
+    @IsString()
     birthdate: string;
 
-    @IsDate()
+    @IsString()
     creationDate: string;
 
     @IsString()
