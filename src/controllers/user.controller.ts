@@ -3,13 +3,14 @@ import { UserService } from "./../services/user.service";
 import { CreateUserPhaseOneDto } from '../dto/create-user-phase-one.dto';
 import { CreateUserPhaseTwoDto } from './../dto/create-user-phase-two.dto';
 import { ValidationPipe } from './../services/pipe/validation.pipe';
+import { User } from './../schemas/user.schema';
 
 @Controller('/user')
 export class UserController{
     constructor(private readonly userService: UserService) {}
 
     @Post('/signupPhaseOne')
-    createUserPhaseOne(@Body(new ValidationPipe()) createUserPhaseOneDto: CreateUserPhaseOneDto): string{
+    createUserPhaseOne(@Body(new ValidationPipe()) createUserPhaseOneDto: CreateUserPhaseOneDto): Promise<User>{
         return this.userService.createUserPhaseOne(createUserPhaseOneDto);
     }
 
